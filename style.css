@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;800&family=Outfit:wght@400;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat Alternates', sans-serif;
+  color: rgb(113, 113, 248);
+  background-color: rgb(31, 2, 78);
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  grid-template-rows: repeat(2, 50vh);
+  row-gap: 4rem;
+  /* background-image: url('gif-backgraund/gif-bg.gif');   */
+}
+
+/* LAYOUT */
+header {
+  grid-column: 1 / -1;
+  position: relative;
+  height: 50vh;
+  display: grid;
+  grid-template-columns: 5rem 1fr minmax(30rem, max-content) 1fr 5rem;
+  grid-template-rows: auto 18.4rem 11.6rem;
+}
+
+main {
+  grid-column: 2 / 3;
+  color: rgb(113, 113, 248);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  grid-template-rows: repeat(2, min-content);
+  row-gap: 3rem;
+}
+
+.btn {
+  border: none;
+  background-color: white;
+  box-shadow: 5px 5px rgb(99, 255, 195);
+  border-radius: 10px;
+  color: rgb(14, 0, 65);
+  font-size: calc(1.5rem + 0.5vw);
+  font-family: inherit;
+  padding: 2rem 3rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgb(255, 233, 111);
+  transform: translateX(5px);
+  transform: translateY(5px);
+  box-shadow: none;
+}
+
+/*-*-*-*-*-*-*-*-*-*-* TOP *-*-*-*-*-*-*-*-*-*-*/
+
+h1.message {
+  display: inline;
+  text-shadow: 5px 5px rgb(5, 1, 10);
+  -webkit-text-stroke: calc(0.2rem + 0.1vw) rgb(81, 81, 212);
+  border-radius: 20px;
+  grid-column: 2 / 5;
+  grid-row: 2 / 3;
+  align-self: center;
+  font-size: 10rem;
+  font-size: calc(3.5rem + 4vw);
+  text-align: center;
+
+  width: 100%;
+  margin: 2.5rem 0;
+}
+
+.number {
+  position: relative;
+  grid-column: 1 / -1;
+  grid-row: 3 / -1;
+  place-self: center;
+  background: white;
+  border-radius: 10%;
+  border: calc(0.3rem + 0.3vw) solid rgb(99, 255, 195);
+  outline: 3px solid rgb(68, 207, 154);
+  color: rgb(255, 0, 221);
+  font-size: calc(3rem + 2.5vw);
+  width: calc(10rem + 3vw);
+  padding: calc(0.8rem + 1vw) 0rem;
+  margin-top: 2rem;
+  text-align: center;
+  z-index: 5;
+}
+
+.line {
+  grid-column: 1 / -1;
+  grid-row: 3 / -1;
+  place-self: center;
+  background-color: rgb(99, 255, 195);
+  outline: 3px solid rgb(68, 207, 154);
+  height: calc(0.3rem + 0.3vw);
+  width: 100vw;
+  margin-top: 2rem;
+}
+
+.between {
+  color: rgb(255, 233, 111);
+  background-color: rgb(31, 2, 78);
+  grid-column: 4 / 5;
+  grid-row: 1 / 2;
+  justify-self: end;
+  align-self: start;
+  font-size: 1.6rem;
+  margin-top: 2rem;
+}
+
+.again {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  justify-self: start;
+  align-self: start;
+
+  margin-top: 2rem;
+}
+
+/*-*-*-*-*-*-*-*-*-*-* Bottom *-*-*-*-*-*-*-*-*-*-*/
+
+.bottom-top {
+  margin-top: 5rem;
+  justify-self: center;
+  grid-row: 2 / 3;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, min-content);
+  column-gap: 3rem;
+  align-items: center;
+}
+
+.guess {
+  background: rgb(31, 2, 78);
+  border-radius: 15px;
+  border: 4px solid rgb(99, 255, 195);
+  outline: 3px solid rgb(68, 207, 154);
+  font-family: inherit;
+  color: rgb(255, 0, 221);
+  font-size: calc(3rem + 2.5vw);
+  padding: calc(0.8rem + 1vw);
+  width: calc(15rem + 3vw);
+  text-align: center;
+  display: block;
+}
+
+.bottom-bottom {
+  grid-row: 3 / 4;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  column-gap: 3rem;
+}
+
+.label-score,
+.label-highscore {
+  font-size: 2.5rem;
+  background-color: rgb(31, 2, 78);
+  border-radius: 20px;
+}
+
+.label-score span,
+.label-highscore span {
+  color: rgb(255, 0, 221);
+}
+
+/*-*-*-*-*-*-*-* 585px screen *-*-*-*-*-*-*-*/
+
+@media screen and (max-width: 585px) {
+  header {
+    grid-template-columns: 3rem minmax(35rem, max-content) 3rem;
+  }
+
+  h1.message {
+    grid-column: 2 / 3;
+  }
+
+  .again {
+    grid-column: 2 / 3;
+  }
+
+  .between {
+    grid-column: 2 / 3;
+  }
+
+  .number,
+  .line {
+    margin-top: 3rem;
+  }
+}
